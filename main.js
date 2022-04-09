@@ -46,20 +46,60 @@ function checkDataType(element) {
 }
 
 console.log(checkDataType(5))
+console.log(checkDataType('hello'))
+console.log(checkDataType(true))
   
 // Write a JavaScript program that adds 2 numbers together.
 
+const addTwoNumbers = (num1, num2) => {
+  return num1 + num2;
+}
 
+console.log(addTwoNumbers(1,2))
+console.log(addTwoNumbers(50,90))
 
 // Write a JavaScript program that runs only when 2 things are true.
 
-
+const twoTrueThings = (x, y) => {
+  if(x >= y && y >= x) {
+    return true
+  }
+  else {
+    return "Doesn't Work"
+  }
+}
+console.log(twoTrueThings(1,1))
+console.log(twoTrueThings(0,1))
+console.log(twoTrueThings(8,8))
+console.log(twoTrueThings(20,6))
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
+const oneTrueThing = (x, y) => {
+  if(x > y || y-x > 0){
+    return true
+  }
+  else {
+    return "Nah"
+  }
+}
 
+console.log(oneTrueThing(1,2))
+console.log(oneTrueThing(2,2))
 
 // Write a JavaScript program that runs when both things are not true.  
+
+const notTrueThings = (x, y) => {
+  if(!(y > 0 && x > 0)){
+    return true
+  }
+  else {
+    return "Nope"
+  }
+}
+
+console.log(notTrueThings(1, 1))
+console.log(notTrueThings(-1, -3))
 
 // ***************************
 //         PART TWO
