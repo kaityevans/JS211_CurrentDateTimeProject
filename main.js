@@ -15,24 +15,24 @@ const displayDate = () => {
  
 
 // Write a JavaScript program to convert a number to a string.
-const convertNumberToString = (str) => {
+const convertStringToNumber = (str) => {
   console.log(typeof str)
   const result = Number(str)
   console.log(typeof result)
   return result
 }
 
-console.log(convertNumberToString("5"))
+console.log(convertStringToNumber("5"))
 
 // Write a JavaScript program to convert a string to the number.
-const convertStringToNumber = (num) => {
+const convertNumberToString = (num) => {
   console.log(typeof(num))
   const answer = String(num)
   console.log(typeof(answer))
   return answer
 }
 
-console.log(convertStringToNumber(5))
+console.log(convertNumberToString(5))
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
   // * Null
@@ -55,6 +55,16 @@ const addTwoNumbers = (num1, num2) => {
   return num1 + num2;
 }
 
+let firstNumber = document.getElementById('firstNumber')
+let secondNumber = document.getElementById('secondNumber')
+let sumOutput = document.getElementById('sumOutput')
+let sum = document.getElementById('sum')
+
+sum.addEventListener('click', () => {
+  console.log('click')
+  sumOutput.innerText = Number(firstNumber.value) + Number(secondNumber.value)
+})
+
 console.log(addTwoNumbers(1,2))
 console.log(addTwoNumbers(50,90))
 
@@ -68,6 +78,17 @@ const twoTrueThings = (x, y) => {
     return "Doesn't Work"
   }
 }
+
+let xVar = document.getElementById('xVar')
+let yVar = document.getElementById('yVar')
+let truthOutput = document.getElementById('truthOutput')
+let isItTrue = document.getElementById('isItTrue')
+
+isItTrue.addEventListener('click', () => {
+  console.log('click')
+  truthOutput.innerText = twoTrueThings(xVar.value, yVar.value)
+})
+
 console.log(twoTrueThings(1,1))
 console.log(twoTrueThings(0,1))
 console.log(twoTrueThings(8,8))
@@ -83,6 +104,16 @@ const oneTrueThing = (x, y) => {
     return "Nah"
   }
 }
+
+let xNum = document.getElementById('xNum')
+let yNum = document.getElementById('yNum')
+let oneOutput = document.getElementById('oneOutput')
+let justOne = document.getElementById('justOne')
+
+justOne.addEventListener('click', () => {
+  console.log('click')
+  oneOutput.innerText = oneTrueThing(xNum.value) + oneTrueThing(yNum.value)
+})
 
 console.log(oneTrueThing(1,2))
 console.log(oneTrueThing(2,2))
