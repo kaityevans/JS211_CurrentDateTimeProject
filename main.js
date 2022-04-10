@@ -112,7 +112,7 @@ let justOne = document.getElementById('justOne')
 
 justOne.addEventListener('click', () => {
   console.log('click')
-  oneOutput.innerText = oneTrueThing(xNum.value) + oneTrueThing(yNum.value)
+  oneOutput.innerText = oneTrueThing(xNum.value, yNum.value)
 })
 
 console.log(oneTrueThing(1,2))
@@ -128,6 +128,16 @@ const notTrueThings = (x, y) => {
     return "Nope"
   }
 }
+
+let xInput = document.getElementById('xInput')
+let yInput = document.getElementById('yInput')
+let notTrueOutput = document.getElementById('notTrueOutput')
+let notTrue = document.getElementById('notTrue')
+
+notTrue.addEventListener('click', () => {
+  console.log('click')
+  notTrueOutput.innerText = notTrueThings(xInput.value, yInput.value)
+})
 
 console.log(notTrueThings(1, 1))
 console.log(notTrueThings(-1, -3))
